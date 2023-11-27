@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "enter_any_dimension": {
+            "trigger": "minecraft:changed_dimension"
+        }
+    },
+    "rewards": {
+        "function": "hammer-time:private/minecraftphi/prep_util_chunk"
+    }
+}

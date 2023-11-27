@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:netherite_pickaxe"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "apoli:add_power",
+                    "power": "hammer-time:item",
+                    "slot": "mainhand",
+                    "hidden": false
+                },
+                {
+                    "function": "minecraft:set_name",
+                    "name": {
+                        "text": "Netherite Hammer",
+                        "italic": false
+                    }
+                }
+            ]
+        }
+    ]
+}

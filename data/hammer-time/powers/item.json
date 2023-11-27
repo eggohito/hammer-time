@@ -1,0 +1,67 @@
+{
+
+    "name": "It's hammer time!",
+    "description": "You can mine blocks in a 3x3 grid unless you're sneaking.",
+
+
+    "type": "apoli:action_on_block_break",
+    "entity_action": {
+        "type": "apoli:and",
+        "actions": [
+            {
+                "type": "apoli:execute_command",
+                "command": "tag @s add hammer-time.user"
+            },
+            {
+                "type": "apoli:raycast",
+                "distance": 128,
+                "entity": false,
+                "block": true,
+                "shape_type": "outline",
+                "fluid_handling": "none",
+                "block_action": {
+                    "type": "apoli:execute_command",
+                    "command": "execute as @e[type = minecraft:marker, tag = hammer-time.block.pos] at @s run function hammer-time:impl/direction/determine"
+                },
+                "command_at_hit": "summon marker ~ ~ ~ {Tags: [\"hammer-time.block\", \"hammer-time.block.direction\"]}",
+                "command_hit_offset": 0
+            },
+            {
+                "type": "apoli:equipped_item_action",
+                "equipment_slot": "mainhand",
+                "action": {
+                    "type": "apoli:damage",
+                    "amount": 8,
+                    "ignore_unbreaking": false
+                }
+            },
+            {
+                "type": "apoli:execute_command",
+                "command": "tag @s remove hammer-time.user"
+            },
+            {
+                "type": "apoli:execute_command",
+                "command": "kill @e[type = minecraft:marker, tag = hammer-time.block]"
+            }
+        ]
+    },
+    "block_action": {
+        "type": "apoli:and",
+        "actions": [
+            {
+                "type": "apoli:execute_command",
+                "command": "summon marker ~ ~ ~ {Tags: [\"hammer-time.block\", \"hammer-time.block.pos\"], CustomName: '{\"text\": \"Hammer (BlockPos helper)\"}'}"
+            },
+            {
+                "type": "apoli:set_block",
+                "block": "minecraft:barrier"
+            }
+        ]
+    },
+    "only_when_harvested": true,
+    "condition": {
+        "type": "apoli:sneaking",
+        "inverted": true
+    }
+    
+}
