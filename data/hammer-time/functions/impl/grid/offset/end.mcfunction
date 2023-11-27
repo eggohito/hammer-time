@@ -1,6 +1,8 @@
-#> hammer-time:impl/grid/move_vec/origin/end
+#> hammer-time:impl/grid/offset/end
 #
-#@within hammer-time:impl/grid/move_vec/origin/-y
+#   >   End the process of offsetting the starting position of the grid
+#
+#@within hammer-time:impl/direction/offset/y
 
 
 #   Re-initialize the scores of the `#grid.dx`, `#grid.dy` and `#grid.dz` score holders in the `hammer-time` scoreboard objective
@@ -11,5 +13,5 @@ scoreboard players operation #grid.dy hammer-time = grid.y hammer-time
 scoreboard players operation #grid.dz hammer-time = grid.z hammer-time
 
 
-#   Start destroying the blocks in the "mapped" grid
-function hammer-time:impl/grid/move_vec/z
+#   Start destroying the blocks within the grid
+function hammer-time:impl/grid/move/z

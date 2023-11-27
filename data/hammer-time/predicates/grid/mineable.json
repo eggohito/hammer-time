@@ -1,0 +1,90 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:reference",
+                    "name": "hammer-time:user/is_holding_item/axe"
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "tag": "minecraft:mineable/axe"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:reference",
+                    "name": "hammer-time:user/is_holding_item/hoe"
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "tag": "minecraft:mineable/hoe"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:reference",
+                    "name": "hammer-time:user/is_holding_item/pickaxe"
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "tag": "minecraft:mineable/pickaxe"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:reference",
+                    "name": "hammer-time:user/is_holding_item/shovel"
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "tag": "minecraft:mineable/shovel"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:reference",
+                    "name": "hammer-time:user/is_holding_item/special"
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "tag": "hammer-time:mineable/special"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

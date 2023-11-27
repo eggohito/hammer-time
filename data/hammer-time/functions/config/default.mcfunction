@@ -1,6 +1,6 @@
 #> hammer-time:config/default
 #
-#@within hammer-time:load
+#@internal
 
 
 scoreboard players set grid.x hammer-time 3

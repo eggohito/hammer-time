@@ -5,6 +5,6 @@
         }
     },
     "rewards": {
-        "function": "hammer-time:private/minecraftphi/prep_util_chunk"
+        "function": "hammer-time:private/minecraftphi/load"
     }
 }
